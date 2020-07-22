@@ -5,7 +5,18 @@ Returns: a List of integers
 def moving_zeroes(arr):
     # Your code here
 
-    pass
+    #array of zero integers
+    zarr = [i for i in arr if i is 0]
+    #array of non zero
+    arr = [i for i in arr if i is not 0]
+  
+    arr = arr + zarr
+
+
+    return arr
+
+    
+
 
 
 if __name__ == '__main__':

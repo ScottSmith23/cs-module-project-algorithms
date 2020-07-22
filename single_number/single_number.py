@@ -4,8 +4,17 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    arr2 = []
+    #loop through array appending all values into arr2 
+    # and then removing it if it is seen twice
+    for i in arr:
+        if i not in arr2:
+            arr2.append(i)
+        else:
+            arr2.remove(i)
+    return arr2[0]
 
-    pass
+
 
 
 if __name__ == '__main__':
