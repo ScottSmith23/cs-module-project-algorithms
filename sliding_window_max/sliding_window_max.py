@@ -4,8 +4,19 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    mults = len(nums) - k + 1
+    windarr = []
+    triparr = []
+    for i in range(0,mults):
+        triparr = nums[i:k+i]
+        triparr.sort()
+        windarr.append(triparr[-1])
+    
+    return windarr
 
-    pass
+        
+
+
 
 
 if __name__ == '__main__':
