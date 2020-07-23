@@ -4,15 +4,27 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-    mults = len(nums) - k + 1
-    windarr = []
-    triparr = []
-    for i in range(0,mults):
-        triparr = nums[i:k+i]
-        triparr.sort()
-        windarr.append(triparr[-1])
+    #First PASS SOLUTION
+    # mults = len(nums) - k + 1
+    # maxarr = []
+    # triparr = []
+    # for i in range(0,mults):
+    #     triparr = nums[i:k+i]
+    #     triparr.sort()
+    #     maxarr.append(triparr[-1])
     
-    return windarr
+    # return maxarr
+
+    #improved SOLUTION
+    maxarr = []
+    for i in range(len(nums)):
+        if k <= len(nums):
+            numarr = nums[i:k]
+            k += 1
+        
+            maxarr.append(max(numarr))
+
+    return maxarr
 
         
 
